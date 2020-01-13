@@ -13,7 +13,7 @@ resource "google_container_cluster" "cluster" {
     password = var.basic_auth_password
 
     client_certificate_config {
-      issue_client_certificate = false
+      issue_client_certificate = true
     }
   }
 }

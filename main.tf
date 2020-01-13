@@ -7,7 +7,7 @@ module "gke_cluster" {
 
 }
 
-data "google_client_config" "client" {}
-
-
-data "google_client_openid_userinfo" "terraform_user" {}
+module "kubernetes" {
+  source    = "./modules/kubenetes"
+  workspace = var.workspace
+}
